@@ -1,0 +1,13 @@
+<div class="product">
+  <!-- <swiper [slidesPerView]="3"
+  [spaceBetween]="50">
+    <ng-template swiperSlide *ngFor="let img of product.images">
+        <img [src]="img" [alt]="product.title">
+    </ng-template>
+  </swiper> -->
+  <app-img [img]="product.images[0]"></app-img>
+  <h2>{{ product.price | currency:'COP $' }}</h2>
+  <p appHighlight>{{ product.title }}</p>
+  <button (click)="onShowDetail()">Show Detail</button>
+  <button (click)="onAddToCart()">Add Cart</button>
+</div>
